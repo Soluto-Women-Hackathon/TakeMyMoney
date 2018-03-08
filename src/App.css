@@ -1,28 +1,57 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('./riffic-bold.ttf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./Roboto-Bold.ttf'); /* IE9 Compat Modes */
+}
+
 .App {
   text-align: center;
+  width: 776px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.headline {
+  margin-top: 100px;
+  font-family: MyFont;
+  font-size: 100px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.take {
+  color: #F6849C;
+  margin-right: 10px;
 }
 
-.App-title {
-  font-size: 1.5em;
+.my {
+  color: #9AECE0;
+  margin-right: 10px;
 }
 
-.App-intro {
-  font-size: large;
+.money {
+  color: #D6E75A;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.sub-headline {
+  color: #F6849C;
+  font-size: 30px;
+  font-family: MyFont;
+  margin-top: 50px;
+  text-align: left;
+}
+
+.why-donate {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 23px;
+  width: 776px;
+  text-align: left;
+  line-height: 20px;
+  color: #999999
 }

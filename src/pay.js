@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class Login extends Component {
+export default class Pay extends Component {
     render() {
         return (
             <div className="App">
@@ -23,8 +23,6 @@ export default class Login extends Component {
                                                 <img alt="" width="1" height="1"
                                                      src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" />
                 </form>
-
-
             </div>
         );
     }
