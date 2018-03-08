@@ -11,7 +11,7 @@
     width: 440px;
     height: 400px;
     margin: 0 auto;
-    -webkit-animation: rotation 2s linear infinite;
+    /*-webkit-animation: rotation 2s linear infinite;*/
 }
 
 .slice-icon{
