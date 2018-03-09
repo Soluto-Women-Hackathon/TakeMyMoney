@@ -10,8 +10,8 @@
 .coin {
     position: absolute;
     left: -1px;
-    top: -100px;
-    transition: top 1.2s linear;
+    top: -1000px;
+    transition: top 3s linear;
 }
 
 .move {

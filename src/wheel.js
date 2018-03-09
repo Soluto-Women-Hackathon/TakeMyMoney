@@ -58,7 +58,9 @@ export default class Wheel extends Component {
             this.result = data[draw];
             d3.select('#wheel-wrapper').attr('class', 'wheel-wrapper ' + this.result.class);
         }
-
+        setTimeout(() => {
+            this.props.onSpinEnd(this.result.label);
+        }, 4000)
     };
 
     drawSvgContainer = () => {

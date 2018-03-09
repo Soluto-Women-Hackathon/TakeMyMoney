@@ -9,9 +9,16 @@ class App extends Component {
   constructor() {
       super();
       this.state = {
-          roll : window.location.href.includes("#!roll")
+          roll : window.location.href.includes("#!roll"),
+          spinDone: false,
+          orgName: ""
       }
   }
+
+  onSpinEnd = (orgName) => {
+    this.setState({spinDone: true, orgName: orgName});
+  };
+
   render() {
     return (
       <div className="App">
@@ -39,7 +46,12 @@ class App extends Component {
                   <div className="tri-wrap">
                       <div className="wheel-triangle"/>
                   </div>
-                  <Wheel/>
+                  <Wheel onSpinEnd={this.onSpinEnd}/>
+                  {this.state.spinDone && <div className="done-message">
+                      <div className="done-header">Woo Hoo!</div>
+                      <div className="done-text">You've just donated $1 to {this.state.orgName}</div>
+                      <div className="done-text">Share my wheel on Facebook</div>
+                  </div>}
               </div>
           </div>
           }
