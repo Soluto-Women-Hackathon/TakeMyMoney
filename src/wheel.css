@@ -124,3 +124,15 @@
     border-right: 18px solid transparent;
     border-top: 70px solid darkgray;
 }
+
+.message{
+    width: 100%;
+    color: #F6849C;
+    font-size: 30px;
+    font-family: MyFont;
+}
+
+.pig-text{
+    position: absolute;
+    bottom: -75px;
+}

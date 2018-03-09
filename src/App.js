@@ -35,6 +35,7 @@ class App extends Component {
           { this.state.roll && <div className="roll">
               <Pig/>
               <div className="wheel-container">
+                  <div className="message">Now click the wheel to spin it and see where your dollar will land! We'll let fate decide</div>
                   <div className="tri-wrap">
                       <div className="wheel-triangle"/>
                   </div>

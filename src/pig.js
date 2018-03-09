@@ -19,6 +19,7 @@ export default class Pig extends Component {
             <img className="ear" src="https://i.imgur.com/7q5Z9DS.png"/>
             <img className="body" src="https://i.imgur.com/r5LDd3i.png"/>
             <img className={`coin ${this.state.moveCoin ? "move" : ""}`} src="https://i.imgur.com/bOiT8Ju.png"/>
+            <div className="message pig-text">Thank you, kind human! we got your dollar</div>
         </div>
         );
     }
