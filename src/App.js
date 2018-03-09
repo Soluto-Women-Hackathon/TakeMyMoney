@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Pay from "./pay";
 import Wheel from "./wheel";
+import Pig from "./pig.js";
+
 import './App.css';
 
 class App extends Component {
@@ -31,7 +33,8 @@ class App extends Component {
           <input className="email-input" type="text" name="email" placeholder="Type your email"/>
           <Pay/>
           { this.state.roll && <roll>
-               <Wheel/>
+              <Pig/>
+              <Wheel/>
           </roll>
           }
       </div>
