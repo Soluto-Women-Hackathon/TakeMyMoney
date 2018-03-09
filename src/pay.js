@@ -5,7 +5,7 @@ export default class Pay extends Component {
         return (
             <div className="pay">
 
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 
                     <input type="hidden" name="business"
                            value="takemymoneytosavetheworld@gmail.com"/>

@@ -26,7 +26,7 @@ class App extends Component {
               Or you can donate that dollar to make a change in the world 🌎.
           </div>
           <div className="why-donate">
-              Take My Money is a platform for anyone with a big heart to donate just $1 to one of thousands of interesting, international non-profit organizations. Let our Wheel of Giving™ decide where to send that dolla bill 💸.
+              Take My Money is a platform for anyone with a big 💖 to donate just $1 to one of thousands of interesting, international non-profit organizations. Let our Wheel of Giving™ decide where to send that dolla bill 💸.
           </div>
           <input className="email-input" type="text" name="email" placeholder="Type your email"/>
           <Pay/>
