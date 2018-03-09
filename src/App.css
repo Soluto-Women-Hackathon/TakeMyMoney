@@ -18,9 +18,10 @@
 }
 
 .headline {
-  margin-top: 100px;
+  margin-top: 90px;
   font-family: MyFont;
   font-size: 100px;
+  text-align: left;
 }
 
 .take {
@@ -54,4 +55,27 @@
   text-align: left;
   line-height: 20px;
   color: #999999
+}
+
+
+.email-input {
+   margin-top: 15px ;
+   background-color: transparent;
+   border: none;
+   border-bottom: 3px dashed #F6849C;
+   outline: none;
+   width: 350px;
+   text-align: center;
+   color: #F6849C;
+   font-size: 25px;
+   font-weight: 500;
+   line-height: 55px;
+}
+
+::placeholder {
+    color: #F6849C;
+}
+
+.pay {
+    margin-top: 55px ;
 }

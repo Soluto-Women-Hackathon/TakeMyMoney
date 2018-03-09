@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 export default class Pay extends Component {
     render() {
         return (
-            <div className="App">
+            <div className="pay">
 
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 
                     <input type="hidden" name="business"
                            value="takemymoneytosavetheworld@gmail.com"/>
@@ -18,7 +18,7 @@ export default class Pay extends Component {
                                         <input type="hidden" name="currency_code" value="USD"/>
 
                                             <input type="image" name="submit"
-                                                   src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"
+                                                   src="https://i.imgur.com/xzVoOX7.png"
                                                    alt="Donate"/>
                                                 <img alt="" width="1" height="1"
                                                      src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" />
