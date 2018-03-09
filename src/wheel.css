@@ -1,17 +1,98 @@
 @-webkit-keyframes rotation {
-    from {
-        -webkit-transform: rotate(0deg);
-    }
-    to {
-        -webkit-transform: rotate(359deg);
-    }
+    0% {  -webkit-transform: rotate(0deg);  }
+    100% {  -webkit-transform: rotate(1500deg);  }
+}
+
+@-webkit-keyframes rotation_1 {
+    0% {  -webkit-transform: rotate(0deg);  }
+    100% {  -webkit-transform: rotate(2130deg);  }
+}
+
+@-webkit-keyframes rotation_2 {
+    0% {  -webkit-transform: rotate(0deg);  }
+    100% {  -webkit-transform: rotate(2185deg);  }
+}
+
+@-webkit-keyframes rotation_3 {
+    0% {  -webkit-transform: rotate(0deg);  }
+    100% {  -webkit-transform: rotate(2040deg);  }
+}
+
+@-webkit-keyframes rotation_4 {
+    0% {  -webkit-transform: rotate(0deg);  }
+    100% {  -webkit-transform: rotate(1990deg);  }
+}
+
+@-webkit-keyframes rotation_5 {
+    0% {  -webkit-transform: rotate(0deg);  }
+    100% {  -webkit-transform: rotate(1950deg);  }
+}
+
+@-webkit-keyframes rotation_6 {
+    0% {  -webkit-transform: rotate(0deg);  }
+    100% {  -webkit-transform: rotate(1910deg);  }
+}
+
+@-webkit-keyframes rotation_7 {
+    0% {  -webkit-transform: rotate(0deg);  }
+    100% {  -webkit-transform: rotate(1860deg);  }
+}
+
+@-webkit-keyframes rotation_8 {
+    0% {  -webkit-transform: rotate(0deg);  }
+    100% {  -webkit-transform: rotate(1820deg);  }
 }
 
 .wheel-wrapper{
-    width: 440px;
-    height: 400px;
+    width: 420px;
+    height: 420px;
     margin: 0 auto;
-    /*-webkit-animation: rotation 2s linear infinite;*/
+    cursor: pointer;
+}
+
+.spin{
+    -webkit-animation: rotation 3s ease-out;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.spin_1{
+    -webkit-animation: rotation_1 3s ease-out;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.spin_2{
+    -webkit-animation: rotation_2 3s ease-out;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.spin_3{
+    -webkit-animation: rotation_3 3s ease-out;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.spin_4{
+    -webkit-animation: rotation_4 3s ease-out;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.spin_5{
+    -webkit-animation: rotation_5 3s ease-out;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.spin_6{
+    -webkit-animation: rotation_6 3s ease-out;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.spin_7{
+    -webkit-animation: rotation_7 3s ease-out;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.spin_8{
+    -webkit-animation: rotation_8 3s ease-out;
+    -webkit-animation-fill-mode: forwards;
 }
 
 .slice-icon{

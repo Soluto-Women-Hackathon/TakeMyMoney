@@ -1,26 +1,30 @@
 import React, { Component } from 'react';
 import d3 from 'd3';
 
-const width = 400,
-    height = 400,
+const width = 420,
+    height = 420,
     radius = width/2;
 
 const data = [
-    {label: "org 1", value:60},
-    {label: "org 2", value:60},
-    {label: "org 3", value:60},
-    {label: "org 4", value:60},
-    {label: "org 5", value:60},
-    {label: "org 6", value:60}
+    {label: "org1", value:45, class: 'spin_1'},
+    {label: "org2", value:45, class: 'spin_2'},
+    {label: "org3", value:45, class: 'spin_3'},
+    {label: "org4", value:45, class: 'spin_4'},
+    {label: "org5", value:45, class: 'spin_5'},
+    {label: "org6", value:45, class: 'spin_6'},
+    {label: "org7", value:45, class: 'spin_7'},
+    {label: "org8", value:45, class: 'spin_8'}
 ];
 
-var aColor = [
-    'rgb(178, 55, 56)',
-    'rgb(213, 69, 70)',
-    'rgb(230, 125, 126)',
-    'rgb(150, 45, 40)',
-    'rgb(120, 30, 30)',
-    'rgb(100, 20, 15)'
+let colors = [
+    '#FFE773',
+    '#FFBD7B',
+    '#FFCED6',
+    '#F6849C',
+    '#9AECE0',
+    '#ADB5F7',
+    '#D6E75A',
+    '#6ee527'
 ];
 
 let pie = d3.layout.pie().value(function(d){return d.value;});
@@ -37,7 +41,7 @@ export default class Wheel extends Component {
     }
 
     componentDidMount(){
-        this.drawSvgContainer()
+        this.drawSvgContainer();
     }
 
     render() {
@@ -46,14 +50,22 @@ export default class Wheel extends Component {
         );
     }
 
+    spinWheel = () => {
+        let draw = Math.floor(Math.random() * 8);
+        this.result = data[draw];
+        d3.select('#wheel-wrapper').attr('class', this.result.class);
+    };
+
     drawSvgContainer = () => {
         this.svg = d3.select('#wheel-wrapper')
             .append("svg")
             .data([data])
-            .attr("width", width + 40)
+            .attr("width", width)
             .attr("height", height)
             .append("g")
-            .attr("transform", "translate(220," + radius + ")");
+            .attr("class", "wheel-group")
+            .attr("transform", "translate(210,210)")
+            .on('click', this.spinWheel);
 
         this.arcs = this.svg.selectAll("g.slice").data(pie)
             .enter()
@@ -61,7 +73,7 @@ export default class Wheel extends Component {
             .attr("class", "slice");
 
         this.arcs.append("path")
-            .attr("fill", function(d, i){return aColor[i];})
+            .attr("fill", function(d, i){return colors[i];})
             .attr("d", function (d) {return arc(d);});
 
         this.arcs.append("text")
@@ -80,7 +92,7 @@ export default class Wheel extends Component {
                 return "translate(" + arc.centroid(d) + ")";}
             )
             .attr("r", "20")
-            .attr("fill", function(d, i){return aColor[i]});
+            .attr("fill", function(d, i){return colors[i]});
 
         this.arcs.append("circle")
             .attr("transform", function(d, i){
