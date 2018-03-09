@@ -4,6 +4,12 @@ import Wheel from "./wheel";
 import './App.css';
 
 class App extends Component {
+  constructor() {
+      super();
+      this.state = {
+          roll : window.location.href.includes("#!roll")
+      }
+  }
   render() {
     return (
       <div className="App">
@@ -24,7 +30,10 @@ class App extends Component {
           </div>
           <input className="email-input" type="text" name="email" placeholder="Type your email"/>
           <Pay/>
-          <Wheel/>
+          { this.state.roll && <roll>
+               <Wheel/>
+          </roll>
+          }
       </div>
     );
   }
