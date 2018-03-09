@@ -32,10 +32,15 @@ class App extends Component {
           </div>
           <input className="email-input" type="text" name="email" placeholder="Type your email"/>
           <Pay/>
-          { this.state.roll && <roll>
+          { this.state.roll && <div className="roll">
               <Pig/>
-              <Wheel/>
-          </roll>
+              <div className="wheel-container">
+                  <div className="tri-wrap">
+                      <div className="wheel-triangle"/>
+                  </div>
+                  <Wheel/>
+              </div>
+          </div>
           }
       </div>
     );

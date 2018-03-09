@@ -1,11 +1,10 @@
 
 
 .pig {
-    position: absolute;
+    position: relative;
     width: 399px;
     height: 403px;
-    left: 50%;
-    transform: translate(-50%, 0);
+    margin: 110px auto;
 }
 
 .coin {

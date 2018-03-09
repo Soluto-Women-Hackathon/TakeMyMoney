@@ -11,6 +11,7 @@
 .App {
   text-align: center;
   width: 776px;
+  height: 2000px;
   position: absolute;
   left: 50%;
   top: 0;
@@ -78,4 +79,10 @@
 
 .pay {
     margin-top: 55px ;
+}
+
+.roll{
+    width: 100%;
+    height: 1200px;
+    margin: 0 auto;
 }

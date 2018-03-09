@@ -6,14 +6,14 @@ const width = 420,
     radius = width/2;
 
 const data = [
-    {label: "org1", value:45, class: 'spin_1'},
-    {label: "org2", value:45, class: 'spin_2'},
-    {label: "org3", value:45, class: 'spin_3'},
-    {label: "org4", value:45, class: 'spin_4'},
-    {label: "org5", value:45, class: 'spin_5'},
-    {label: "org6", value:45, class: 'spin_6'},
-    {label: "org7", value:45, class: 'spin_7'},
-    {label: "org8", value:45, class: 'spin_8'}
+    {label: "Dogs trust", value:45, class: 'spin_1'},
+    {label: "CASJ", value:45, class: 'spin_2'},
+    {label: "SOS", value:45, class: 'spin_3'},
+    {label: "RSCPA", value:45, class: 'spin_4'},
+    {label: "Hope for paws", value:45, class: 'spin_5'},
+    {label: "ASPCA", value:45, class: 'spin_6'},
+    {label: "Mercy for Animals", value:45, class: 'spin_7'},
+    {label: "PETA", value:45, class: 'spin_8'}
 ];
 
 let colors = [
@@ -42,6 +42,7 @@ export default class Wheel extends Component {
 
     componentDidMount(){
         this.drawSvgContainer();
+        this.spin = false;
     }
 
     render() {
@@ -51,9 +52,13 @@ export default class Wheel extends Component {
     }
 
     spinWheel = () => {
-        let draw = Math.floor(Math.random() * 8);
-        this.result = data[draw];
-        d3.select('#wheel-wrapper').attr('class', this.result.class);
+        if(!this.spin){
+            this.spin = true;
+            let draw = Math.floor(Math.random() * 8);
+            this.result = data[draw];
+            d3.select('#wheel-wrapper').attr('class', 'wheel-wrapper ' + this.result.class);
+        }
+
     };
 
     drawSvgContainer = () => {
@@ -78,11 +83,15 @@ export default class Wheel extends Component {
 
         this.arcs.append("text")
             .attr("transform", function(d){
-                d.innerRadius = 100;
+                d.innerRadius = 20;
                 d.outerRadius = radius;
                 return "translate(" + arc.centroid(d) + ")";}
             )
             .attr("text-anchor", "middle")
+            .style({
+                "font-size": "12px",
+                "fill": "white"
+            })
             .text( function(d, i) {return data[i].label;});
 
         this.arcs.append("circle")
